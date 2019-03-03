@@ -1,3 +1,4 @@
+" coloring look appearance
 set t_Co=256
 set number
 set tabstop=4
@@ -23,24 +24,22 @@ noremap <Down> gj
 noremap <Up> gk
 nnoremap ,, :w<CR>
 nnoremap mm :q<CR>
-inoremap jj <Esc>
+nnoremap <C-c> c$
+inoremap <silent> jj <Esc>:w<CR>
 set clipboard=unnamed,autoselect
-" カーソル行を強調表示しない
+" no highlighting cursor line when normal mode
 set nocursorline
-" 挿入モードの時のみ、カーソル行をハイライトする
+" highlighting cursor line only when insert mode
 autocmd InsertEnter,InsertLeave * set cursorline!
-" 挿入モード時でもラッピングが有効の時、インライン上下移動が可能になる
-"inoremap <Up>   <C-O>gk
-"inoremap <Down> <C-O>gj
-" 挿入モード時にBSキーの入力を有効にする
+" enable BS key when insert mode
 set backspace=indent,eol,start
 set nocompatible
 
-" 一連のバックアップファイルを自動生成しない
+" no backup or swap file generated
 set noswapfile
 set nobackup
 
-" 印刷時の設定
+" print settings
 set printfont=Myrica\ M:h11
 set printoptions=number:y
 set printheader=%<%f%h%m\ \(Page\ %N\)%=
