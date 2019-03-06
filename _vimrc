@@ -22,6 +22,7 @@ noremap j gj
 noremap k gk
 noremap <Down> gj
 noremap <Up> gk
+noremap <Esc> <Esc>:w<CR>
 nnoremap ,, :w<CR>
 nnoremap mm :q<CR>
 nnoremap <C-c> c$
