@@ -4,6 +4,8 @@ set number
 set tabstop=4
 set shiftwidth=4
 set guifont=Myrica\ M:h13
+set guifontwide=Myrica\ M:h13
+set ambiwidth=double
 set autoindent
 set smartindent
 set laststatus=2
@@ -22,11 +24,16 @@ noremap j gj
 noremap k gk
 noremap <Down> gj
 noremap <Up> gk
-noremap <Esc> <Esc>:w<CR>
+noremap <silent> <Esc> <Esc>:w<CR>
 nnoremap ,, :w<CR>
 nnoremap mm :q<CR>
 nnoremap <C-c> c$
+nnoremap <C-w>j <C-j>
+nnoremap <C-w>k <C-k>
+nnoremap <C-w>h <C-h>
+nnoremap <C-w>l <C-l>
 inoremap <silent> jj <Esc>:w<CR>
+inoremap <silent> <Esc> <Esc>:w<CR>
 set clipboard=unnamed,autoselect
 " no highlighting cursor line when normal mode
 set nocursorline
