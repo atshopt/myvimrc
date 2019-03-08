@@ -24,7 +24,6 @@ noremap j gj
 noremap k gk
 noremap <Down> gj
 noremap <Up> gk
-noremap <silent> <Esc> <Esc>:w<CR>
 nnoremap ,, :w<CR>
 nnoremap mm :q<CR>
 nnoremap <C-c> c$
@@ -33,6 +32,7 @@ nnoremap <C-w>k <C-k>
 nnoremap <C-w>h <C-h>
 nnoremap <C-w>l <C-l>
 inoremap <silent> jj <Esc>:w<CR>
+inoremap <silent> ｊｊ <Esc>:w<CR>
 inoremap <silent> <Esc> <Esc>:w<CR>
 set clipboard=unnamed,autoselect
 " no highlighting cursor line when normal mode
@@ -51,3 +51,5 @@ set nobackup
 set printfont=Myrica\ M:h11
 set printoptions=number:y
 set printheader=%<%f%h%m\ \(Page\ %N\)%=
+
+:source ~\.vim\mycommand.vim
